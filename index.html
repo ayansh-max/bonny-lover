@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bonny Lover 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffdde1, #fbb1d8);
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      margin-top: 40px;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff66cc; }
+      to { text-shadow: 0 0 30px #fff; }
+    }
+    p {
+      font-size: 1.5em;
+      margin: 15px;
+    }
+    .btn-container {
+      margin-top: 30px;
+    }
+    button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .yes { background-color: #28a745; color: #fff; }
+    .no { background-color: #dc3545; color: #fff; }
+    #heartbreak {
+      display: none;
+      font-size: 4em;
+      animation: shake 0.5s infinite;
+    }
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      25% { transform: translate(-1px, -2px) rotate(-1deg); }
+      50% { transform: translate(-3px, 0px) rotate(1deg); }
+      75% { transform: translate(3px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -1px) rotate(1deg); }
+    }
+    #teddy {
+      width: 200px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -20px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bonny 💖</h1>
+  <p>You are my mishti sona 😹</p>
+  <p>Ishq wala life (lofi vibes playing...)</p>
+  <p>For a beautiful girl 💝</p>
+  <p>Ami tomar poglu, will you be my poglu?</p>
+  <p>Ami tomake bhalobasi basi 💘</p>
+
+  <div class="btn-container">
+    <p>Do you love me?</p>
+    <button class="yes" onclick="showYes()">Yes</button>
+    <button class="no" onclick="showNo()">No</button>
+  </div>
+
+  <div id="heartbreak">💔</div>
+  <img id="teddy" src="https://i.postimg.cc/J7f1vmkW/teddy.gif" alt="Teddy Singing">
+  <audio autoplay loop>
+    <source src="https://dl.sndup.net/k6n2/IshqWalaLove-Lofi.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function showYes() {
+      document.body.innerHTML = `
+        <h1 style='margin-top:100px;'>Yayyy!!! 🥰 You're mine now poglu 💖</h1>
+        <p style='font-size: 2em;'>I love you, Bonny! 🌸</p>
+        <p style='font-size: 1.2em;'>Bonny, ab aage dekh kya hai 😍</p>
+        <img style="width: 250px; animation: bounce 2s infinite;" src="https://i.postimg.cc/J7f1vmkW/teddy.gif" alt="Teddy">
+      `;
+    }
+    function showNo() {
+      document.querySelector('#heartbreak').style.display = 'block';
+      setTimeout(() => {
+        location.reload();
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
